@@ -49,4 +49,16 @@ package body dcola is
       when constraint_error => raise mal_uso;
    end borrar_primero;
 
+   function is_last_item(qu:in cola) return Boolean is
+      p: pnodo renames qu.p;
+      q: pnodo renames qu.q;
+   begin
+      if p=q then
+         return True;
+      end if;
+      return False;
+
+
+   end is_last_item;
+
 end dcola;

@@ -1,58 +1,66 @@
 V "GNAT Lib v2016"
 M P W=b
 A -gnatA
+A -gnatc
 A -mtune=generic
 A -march=pentium4
-P ZX
+P NO ZX
 
 RN
 RV NO_IO
+RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U main%b		main.adb		369cbb14 NE OO SU
+U main%b		main.adb		4327209f OO SU
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+W dcola%s		dcola.adb		dcola.ali
 
 D ada.ads		20160516092928 3ffc8e18 ada%s
-D a-except.ads		20160516092928 291912d5 ada.exceptions%s
 D a-ioexce.ads		20160516092926 e4a01f64 ada.io_exceptions%s
 D a-stream.ads		20160516092928 119b8fb3 ada.streams%s
-D a-tags.ads		20160516092932 01f5e3ef ada.tags%s
 D a-textio.ads		20160516092932 386df5d4 ada.text_io%s
-D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
+D dcola.ads		20210329163652 d49d8a9d dcola%s
 D interfac.ads		20160516092928 5ab55268 interfaces%s
 D i-cstrea.ads		20160516092926 e53d8b8e interfaces.c_streams%s
-D main.adb		20210329154302 0ef14ec0 main%b
+D main.adb		20210329163624 afd75fd6 main%b
 D system.ads		20160516092930 2da59038 system%s
 D s-crtl.ads		20160516092926 0ebbdb71 system.crtl%s
-D s-exctab.ads		20160516092930 54135002 system.exception_table%s
 D s-ficobl.ads		20160516092932 078245e4 system.file_control_block%s
 D s-parame.ads		20160516092932 7e2a0d7f system.parameters%s
-D s-soflin.ads		20160516092928 14e1eb6c system.soft_links%s
-D s-stache.ads		20160516092932 a37c21ec system.stack_checking%s
-D s-stalib.ads		20160516092930 09bd3940 system.standard_library%s
-D s-stoele.ads		20160516092932 2dc34a04 system.storage_elements%s
-D s-traent.ads		20160516092928 005bf670 system.traceback_entries%s
-D s-unstyp.ads		20160516092930 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20160516092930 1b7d22d2 system.wch_con%s
 X 1 ada.ads
-16K9*Ada 19e8 10|1r6 1r22
-X 6 a-textio.ads
-49K13*Text_IO 471e16 10|1w10 1r26
-52P9*File_Type 10|3r16
-53n23*In_File{53E9} 10|8r28
-92U14*Open 10|8s4
-94e7 Mode{53E9} 10|8r20
-95a7 Name{string} 10|8r37
-98U14*Close 10|14s4
-183V13*End_Of_File{boolean} 10|9s14
-244U14*Get_Line 10|10s7
-263U14*Put_Line 10|11s7
-X 10 main.adb
-2U11*Main 2b11 16l5 16t9
-3p4 f_entrada{6|52P9} 8m9 8r9 9r26 10r16 14m10 14r10
-4a4 tnom{string} 10m27 11r16
-5i4 l{natural} 10m33 11r24
+16K9*Ada 19e8 8|1r6 1r22
+X 4 a-textio.ads
+49K13*Text_IO 471e16 8|1w10 1r26
+52P9*File_Type 8|14r16
+53n23*In_File{53E9} 8|18r28
+92U14*Open 8|18s4
+94e7 Mode{53E9} 8|18r20
+95a7 Name{string} 8|18r37
+98U14*Close 8|33s4
+183V13*End_Of_File{boolean} 8|19s14
+244U14*Get_Line 8|20s7
+263U14*Put_Line 8|21s7 29s7
+X 5 dcola.ads
+4k9*dcola 30e10 8|2w6 10r33
+5R9 cola 8|16r7[10]
+11U14 poner 8|23s7[10]
+12U14 borrar_primero 8|30s7[10]
+13V13 coger_primero{8|5R10} 8|27s17[10]
+15V13 is_last_item{boolean} 8|26s14[10]
+X 8 main.adb
+3U11*Main 3b11 36l5 36t9
+4A13 tnom{string}<integer> 7r15 22r20
+5R10 tjugador 9e18 10r39 15r14
+7a10 nom{4A13} 22m15 29r24
+8i10 l{natural} 20m41 21r32 29r39
+10K12 dcola_jugador[5|4] 11r8
+13a4 dnom{string} 20m27 21r16 22r25
+14p4 f_entrada{4|52P9} 18m9 18r9 19r26 20r16 33m10 33r10
+15r4 jugador{5R10} 20m33 20r33 21r24 22m7 23r15 27m7 29r16 29r31
+16r4 c{5|5R9[10]} 23m13 23r13 26r27 27r31 30m22 30r22
 
