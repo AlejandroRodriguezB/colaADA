@@ -1,4 +1,5 @@
 with Ada.Text_IO;use Ada.Text_IO;
+with Ada.Integer_Text_IO;use Ada.Integer_Text_IO;
 with dcola;
 procedure Main is
    subtype  tnom is  String (1..50);
@@ -14,6 +15,7 @@ procedure Main is
    f_entrada : File_Type;
    jugador : tjugador;
    c: cola;
+   i:Natural;
 begin
    Open(f_entrada, Mode => In_File, Name => "jugadores.txt");
    while not End_Of_File(f_entrada) loop
@@ -22,7 +24,10 @@ begin
       jugador.nom:=tnom(dnom);
       poner(c,jugador);
    end loop;
-
+   
+   Put_Line("Numero de pasadas: ");
+   Get(i);
+   
    while not is_last_item(c) loop
       jugador:= coger_primero(c);
 
