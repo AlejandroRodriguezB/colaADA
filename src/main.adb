@@ -26,7 +26,7 @@ begin
    end loop;
    Close(f_entrada);
    
-   Put_Line("Numero de pasadas: ");
+   Put_Line("Elije el numero de pasadas: ");
    Get(i);
    
    while not is_last_item(c) loop
