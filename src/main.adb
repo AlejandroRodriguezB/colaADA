@@ -24,6 +24,7 @@ begin
       jugador.nom:=tnom(dnom);
       poner(c,jugador);
    end loop;
+   Close(f_entrada);
    
    Put_Line("Numero de pasadas: ");
    Get(i);
@@ -37,7 +38,7 @@ begin
    
    jugador:= coger_primero(c);
    Put_Line("Ultimo jugador: " & jugador.nom(1..jugador.l));
-   Close(f_entrada);
+   
 
 
 end Main;
