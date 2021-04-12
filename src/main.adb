@@ -29,7 +29,9 @@ begin
       Put_Line(jugador.nom(1..jugador.l)); --pruebas
       borrar_primero(c);
    end loop;
-
+   
+   jugador:= coger_primero(c);
+   Put_Line("Ultimo jugador: " & jugador.nom(1..jugador.l));
    Close(f_entrada);
 
 
